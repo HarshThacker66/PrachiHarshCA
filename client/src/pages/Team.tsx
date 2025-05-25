@@ -10,16 +10,18 @@ const Team = () => {
     {
       id: 1,
       name: "CA Prachi Maheshwari",
-      position: "Managing Partner",
+      position: "Senior Partner",
       bio: "With over 15 years of experience in taxation and auditing, Prachi leads the firm with expertise in GST compliance and corporate taxation.",
-      qualifications: ["Chartered Accountant, ICAI", "GST Practitioner"]
+      qualifications: ["Chartered Accountant, ICAI", "GST Practitioner"],
+      image: "/ca-prachi.jpeg"
     },
     {
       id: 2,
       name: "CA Harsh Thacker",
-      position: "Senior Partner",
+      position: "Managing Partner",
       bio: "Harsh specializes in financial advisory services and audit compliance with 12 years of experience across various industries.",
-      qualifications: ["Chartered Accountant, ICAI", "Certified Internal Auditor"]
+      qualifications: ["Chartered Accountant, ICAI", "Certified Internal Auditor"],
+      image: "/ca-harsh.jpeg"
     }
   ];
 
@@ -100,15 +102,22 @@ const Team = () => {
             {partners.map((partner) => (
               <div key={partner.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="flex flex-col md:flex-row">
-                  <div className="md:w-2/5 bg-[#E1E7ED]" data-mock-image="true" data-implementation="Partner photo to be added">
-                    {/* Placeholder for partner's photo */}
-                    <div className="h-full flex items-center justify-center p-8">
-                      <div className="w-48 h-48 rounded-full bg-[#F4F7FA] flex items-center justify-center">
-                        <span className="text-5xl text-primary font-bold">
-                          {partner.name.split(' ').map(name => name[0]).join('')}
-                        </span>
+                  <div className="md:w-2/5 bg-[#E1E7ED] overflow-hidden">
+                    {partner.image ? (
+                      <img 
+                        src={partner.image} 
+                        alt={`${partner.name} - ${partner.position}`}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="h-full flex items-center justify-center p-8">
+                        <div className="w-48 h-48 rounded-full bg-[#F4F7FA] flex items-center justify-center">
+                          <span className="text-5xl text-primary font-bold">
+                            {partner.name.split(' ').map(name => name[0]).join('')}
+                          </span>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                   <div className="md:w-3/5 p-6">
                     <h3 className="font-heading text-xl font-bold text-primary mb-2">{partner.name}</h3>
