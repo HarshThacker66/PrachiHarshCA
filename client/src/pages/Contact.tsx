@@ -107,8 +107,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold mb-1">Office Address</h3>
                     <p>
-                      405 Prestige Tower, Connaught Place<br />
-                      New Delhi, 110001, India
+                      405 Prestige Tower, Near Bageshree society<br />
+                      Anjar, Gujarat, India
                     </p>
                   </div>
                 </div>
@@ -287,7 +287,7 @@ const Contact = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <p className="text-lg font-medium text-primary">Our Location</p>
-              <p className="text-neutral-dark">405 Prestige Tower, Connaught Place, New Delhi</p>
+              <p className="text-neutral-dark">405 Prestige Tower, Near Bageshree society, Anjar, Gujarat</p>
             </div>
           </div>
         </div>

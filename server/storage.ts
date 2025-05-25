@@ -2,6 +2,8 @@ import {
   users, type User, type InsertUser,
   contactSubmissions, type ContactSubmission, type InsertContactSubmission 
 } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 // Extend the storage interface with the new methods
 export interface IStorage {
@@ -15,34 +17,23 @@ export interface IStorage {
   getAllContactSubmissions(): Promise<ContactSubmission[]>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  private contactSubmissions: Map<number, ContactSubmission>;
-  private userCurrentId: number;
-  private contactSubmissionCurrentId: number;
-
-  constructor() {
-    this.users = new Map();
-    this.contactSubmissions = new Map();
-    this.userCurrentId = 1;
-    this.contactSubmissionCurrentId = 1;
-  }
-
+export class DatabaseStorage implements IStorage {
   // User methods
   async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.userCurrentId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db
+      .insert(users)
+      .values(insertUser)
+      .returning();
     return user;
   }
 
@@ -50,23 +41,27 @@ export class MemStorage implements IStorage {
   async createContactSubmission(
     submission: InsertContactSubmission & { createdAt: string }
   ): Promise<ContactSubmission> {
-    const id = this.contactSubmissionCurrentId++;
-    const contactSubmission: ContactSubmission = { 
-      ...submission, 
-      id,
-      phone: submission.phone ?? '' 
-    };
-    this.contactSubmissions.set(id, contactSubmission);
+    const [contactSubmission] = await db
+      .insert(contactSubmissions)
+      .values({
+        ...submission,
+        phone: submission.phone ?? ''
+      })
+      .returning();
     return contactSubmission;
   }
 
   async getContactSubmission(id: number): Promise<ContactSubmission | undefined> {
-    return this.contactSubmissions.get(id);
+    const [submission] = await db
+      .select()
+      .from(contactSubmissions)
+      .where(eq(contactSubmissions.id, id));
+    return submission || undefined;
   }
 
   async getAllContactSubmissions(): Promise<ContactSubmission[]> {
-    return Array.from(this.contactSubmissions.values());
+    return await db.select().from(contactSubmissions);
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

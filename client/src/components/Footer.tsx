@@ -112,7 +112,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPinIcon className="mt-1 mr-3 h-5 w-5 flex-shrink-0" />
-                <span>405 Prestige Tower, Connaught Place<br />New Delhi, 110001, India</span>
+                <span>405 Prestige Tower, Near Bageshree society<br />Anjar, Gujarat, India</span>
               </li>
               <li className="flex items-center">
                 <PhoneIcon className="mr-3 h-5 w-5 flex-shrink-0" />
