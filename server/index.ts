@@ -1,6 +1,8 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import path from "path";
+import fs from "fs";
 
 const app = express();
 app.use(express.json());
@@ -47,14 +49,23 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
-  if (app.get("env") === "development") {
-    await setupVite(app, server);
-  } else {
-    serveStatic(app);
-  }
+  // Serve static HTML files from root directory
+  app.use(express.static("."));
+  
+  // Handle all routes to serve static HTML files
+  app.get("*", (req, res) => {
+    const requestedFile = req.path === "/" ? "/index.html" : req.path;
+    
+    // Check if file exists in root directory
+    const filePath = path.join(process.cwd(), requestedFile);
+    
+    if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+      res.sendFile(filePath);
+    } else {
+      // Fallback to index.html for unknown routes
+      res.sendFile(path.join(process.cwd(), "index.html"));
+    }
+  });
 
   // ALWAYS serve the app on port 5000
   // this serves both the API and the client.
