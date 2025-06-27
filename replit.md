@@ -129,6 +129,11 @@ The application follows a hybrid architecture combining:
 ```
 Changelog:
 - June 27, 2025. Initial setup
+- June 27, 2025. Updated website images with custom provided assets:
+  * Hero section: Replaced with general.jpeg (company building exterior)
+  * Vision & Mission section: Replaced with Outside view.png (office building)
+  * About us page: Replaced with Mam in cabin.jpeg (professional in office)
+  * Our Story section: Replaced with Selfie.jpeg (team photo)
 ```
 
 ## User Preferences
