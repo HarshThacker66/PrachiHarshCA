@@ -134,6 +134,11 @@ Changelog:
   * Vision & Mission section: Replaced with Outside view.png (office building)
   * About us page: Replaced with Mam in cabin.jpeg (professional in office)
   * Our Story section: Replaced with Selfie.jpeg (team photo)
+- June 27, 2025. Enhanced Our Story section with office media showcase:
+  * Added office lobby video (Lobby video.mp4)
+  * Added office area image (Office area.png)
+  * Added reception area image (Receptionist.jpeg)
+  * Created multimedia gallery layout with descriptions
 ```
 
 ## User Preferences
