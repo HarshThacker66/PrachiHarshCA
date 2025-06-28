@@ -150,6 +150,20 @@ body {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(15, 52, 96, 0.15);
+}
+
+.partner-card img {
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover img {
+    transform: scale(1.05);
 }
 
 .footer {

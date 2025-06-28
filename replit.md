@@ -139,6 +139,11 @@ Changelog:
   * Added office area image (Office area.png)
   * Added reception area image (Receptionist.jpeg)
   * Created multimedia gallery layout with descriptions
+- June 27, 2025. Added hover animations to partner cards:
+  * Card lift effect on hover (translateY(-5px))
+  * Enhanced shadow effect on hover
+  * Image scale effect (1.05x) on hover
+  * Smooth transitions matching team member cards
 ```
 
 ## User Preferences
