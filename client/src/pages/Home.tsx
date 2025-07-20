@@ -567,15 +567,11 @@ const Home = () => {
 
           {/* Map Section */}
           <div className="w-full">
-            <div className="text-center mb-8">
-              <h3 className="font-heading text-2xl font-bold text-primary mb-2">Our Location</h3>
-              <p className="text-neutral-dark">405 Prestige Tower, Near Bageshree society, Anjar, Gujarat</p>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg w-full">
+            <div className="rounded-lg overflow-hidden shadow-lg w-full h-80">
               <iframe 
                 src="https://www.google.com/maps/d/embed?mid=15J0rNLHAyslByUC5ZhLRO14zBdv2Akk&ehbc=2E312F&noprof=1" 
                 width="100%" 
-                height="400"
+                height="100%"
                 style={{ border: 0 }}
                 allowFullScreen={false}
                 loading="lazy"
