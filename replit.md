@@ -154,6 +154,12 @@ Changelog:
   * Added same map embed to static HTML contact page
   * Enhanced styling with rounded corners and shadow effects
   * Responsive design with 100% width and 480px height
+- July 20, 2025. Optimized map sizing and layout across all pages:
+  * Reduced Contact page map height from 480px to 400px for better fit
+  * Added max-width constraints (800px) and centered maps for better layout
+  * Added comprehensive contact section to React Home component with map
+  * Standardized map height to 350px on home page for compact display
+  * Maintained consistent styling across static HTML and React components
 ```
 
 ## User Preferences

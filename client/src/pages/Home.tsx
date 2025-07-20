@@ -426,6 +426,166 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 md:py-24 bg-[#F4F7FA]">
+        <div className="container mx-auto px-4 lg:px-6">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">Get In Touch</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="max-w-2xl mx-auto text-neutral-dark">
+              Have questions or need assistance? Contact our team for a consultation today.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <h3 className="font-heading text-2xl font-bold text-primary mb-6">Contact Information</h3>
+              
+              <div className="flex items-start space-x-4">
+                <div className="bg-primary rounded-full p-3 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary mb-1">Office Address</h4>
+                  <p className="text-neutral-dark">405 Prestige Tower, Near Bageshree society<br />Anjar, Gujarat, India</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="bg-primary rounded-full p-3 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary mb-1">Phone</h4>
+                  <p className="text-neutral-dark">+91 11 4567 8901<br />+91 98765 43210</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="bg-primary rounded-full p-3 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary mb-1">Email</h4>
+                  <p className="text-neutral-dark">info@phassociates.com<br />contact@phassociates.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="bg-primary rounded-full p-3 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary mb-1">Working Hours</h4>
+                  <p className="text-neutral-dark">Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 2:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="font-heading text-2xl font-bold text-primary mb-6">Send us a Message</h3>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-neutral-dark mb-2">Full Name *</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      className="w-full px-4 py-3 border border-neutral-medium rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      required 
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-neutral-dark mb-2">Email Address *</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      className="w-full px-4 py-3 border border-neutral-medium rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      required 
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-neutral-dark mb-2">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      className="w-full px-4 py-3 border border-neutral-medium rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-neutral-dark mb-2">Subject *</label>
+                    <input 
+                      type="text" 
+                      id="subject" 
+                      className="w-full px-4 py-3 border border-neutral-medium rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      required 
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-neutral-dark mb-2">Message *</label>
+                  <textarea 
+                    id="message" 
+                    rows={5}
+                    className="w-full px-4 py-3 border border-neutral-medium rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  ></textarea>
+                </div>
+                <div className="flex items-start">
+                  <input 
+                    type="checkbox" 
+                    id="privacy" 
+                    className="mt-1 mr-3"
+                    required 
+                  />
+                  <label htmlFor="privacy" className="text-sm text-neutral-dark">
+                    I agree to the privacy policy and terms of service
+                  </label>
+                </div>
+                <Link href="/contact">
+                  <Button className="w-full bg-primary text-white hover:bg-secondary py-6 h-auto">
+                    Send Message
+                  </Button>
+                </Link>
+              </form>
+            </div>
+          </div>
+
+          {/* Map Section */}
+          <div className="w-full">
+            <div className="text-center mb-8">
+              <h3 className="font-heading text-2xl font-bold text-primary mb-2">Our Location</h3>
+              <p className="text-neutral-dark">405 Prestige Tower, Near Bageshree society, Anjar, Gujarat</p>
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg max-w-4xl mx-auto">
+              <iframe 
+                src="https://www.google.com/maps/d/embed?mid=15J0rNLHAyslByUC5ZhLRO14zBdv2Akk&ehbc=2E312F&noprof=1" 
+                width="100%" 
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Prachi Harsh & Associates Office Location"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
