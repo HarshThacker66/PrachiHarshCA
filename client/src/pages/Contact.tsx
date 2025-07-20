@@ -284,11 +284,11 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold text-primary mb-2">Our Location</h3>
             <p className="text-neutral-dark">405 Prestige Tower, Near Bageshree society, Anjar, Gujarat</p>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-lg max-w-4xl mx-auto">
+          <div className="rounded-lg overflow-hidden shadow-lg w-full">
             <iframe 
               src="https://www.google.com/maps/d/embed?mid=15J0rNLHAyslByUC5ZhLRO14zBdv2Akk&ehbc=2E312F&noprof=1" 
               width="100%" 
-              height="400"
+              height="450"
               style={{ border: 0 }}
               allowFullScreen={false}
               loading="lazy"

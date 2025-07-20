@@ -153,7 +153,9 @@ Changelog:
   * Integrated custom Google Maps iframe in React Contact component
   * Added same map embed to static HTML contact page
   * Enhanced styling with rounded corners and shadow effects
-  * Responsive design with 100% width and 480px height
+  * Added complete contact section with map to React Home page
+  * Optimized map sizing to fill entire placeholder areas (full width, increased heights)
+  * Final dimensions: Contact pages 450px height, Home pages 400px height
 - July 20, 2025. Optimized map sizing and layout across all pages:
   * Reduced Contact page map height from 480px to 400px for better fit
   * Added max-width constraints (800px) and centered maps for better layout
