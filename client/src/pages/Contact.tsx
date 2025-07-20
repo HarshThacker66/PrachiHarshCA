@@ -279,16 +279,22 @@ const Contact = () => {
         </div>
 
         {/* Map Section */}
-        <div className="h-96 bg-[#E1E7ED] w-full mt-16 rounded-lg" data-mock="true" data-implementation="Integrate Google Maps API here">
-          <div className="h-full flex items-center justify-center">
-            <div className="text-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-primary mb-4 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <p className="text-lg font-medium text-primary">Our Location</p>
-              <p className="text-neutral-dark">405 Prestige Tower, Near Bageshree society, Anjar, Gujarat</p>
-            </div>
+        <div className="w-full mt-16">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-semibold text-primary mb-2">Our Location</h3>
+            <p className="text-neutral-dark">405 Prestige Tower, Near Bageshree society, Anjar, Gujarat</p>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <iframe 
+              src="https://www.google.com/maps/d/embed?mid=15J0rNLHAyslByUC5ZhLRO14zBdv2Akk&ehbc=2E312F&noprof=1" 
+              width="100%" 
+              height="480"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Prachi Harsh & Associates Office Location"
+            />
           </div>
         </div>
       </div>

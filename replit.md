@@ -144,6 +144,16 @@ Changelog:
   * Enhanced shadow effect on hover
   * Image scale effect (1.05x) on hover
   * Smooth transitions matching team member cards
+- July 20, 2025. Migration to Replit environment completed:
+  * Set up PostgreSQL database with proper configuration
+  * Created database tables for contact submissions and users
+  * Fixed all dependencies and server startup issues
+  * Verified application running successfully on port 5000
+- July 20, 2025. Added Google Maps embed to "Our Location" section:
+  * Integrated custom Google Maps iframe in React Contact component
+  * Added same map embed to static HTML contact page
+  * Enhanced styling with rounded corners and shadow effects
+  * Responsive design with 100% width and 480px height
 ```
 
 ## User Preferences
